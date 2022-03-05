@@ -1,0 +1,101 @@
+*,::before,::after{
+    margin: 0;
+    box-sizing: border-box
+}
+a{ text-decoration: none;}
+img{ vertical-align: bottom;}
+button{ cursor: pointer;}
+
+@font-face {
+    font-family: mb ;
+    src: url(../fonts/Montserrat-Bold.woff2);
+}
+@font-face {
+    font-family: mr;
+    src: url(../fonts/Montserrat-Regular.woff2);
+}
+body {
+    font-family: mr,sans-serif
+}
+h1, h2, h3, h4, strong, b, th, .large{ font-family: mb, sans-serif; }
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.row{ 
+    display: flex;   
+    flex-flow: row wrap; 
+    margin: 0 -15px;
+}
+.row > [class^="col"]{
+    flex: 1 1 auto;
+    padding: 0 15px;
+}
+.row .col-2{ flex:1 1 16.66%; }
+.row .col-3{ flex:1 1 25%; }
+.row .col-4{ flex:1 1 33.33%; }
+.row .col-6{ flex: 1 1 50%;}
+.row .col-8{ flex: 1 1 66.66%; }
+.row .col-9{ flex: 1 1 75%; }
+.row .col-12{ flex: 1 1 100%; }
+
+@media screen and (max-width:1220px){
+        .container{ width: 960px;}
+}
+@media screen and (max-width:980px){
+    .container{ width: 100%;}
+    .row .col-t-3{ flex: 1 1 25%; }
+    .row .col-t-6{ flex: 1 1 50%; }
+    .row .col-t-9{ flex: 1 1 75%; }
+    .row .col-t-12{ flex: 1 1 100%; }
+}
+
+/*  layout */
+
+.kus{ font-family: 'Kaushan Script', cursive;;}
+.wrap-1{ 
+    background: url(../img/bg-lg.jpg) no-repeat center center/cover;
+    padding: 26px 0;
+ }
+ .wrap-1 h1{ }
+ .wrap-1 h1 a{ color: #fff;}
+ .wrap-1 nav{ display: flex; flex-flow: row wrap;  justify-content: space-between;}
+ .wrap-1 .nav{ list-style: none; padding: 0; display: flex; align-items: center; }
+ .wrap-1 .nav li{  margin: 0 28px; }
+ .wrap-1 .nav li a{ display: block; font-size: 14px; color: #fff; padding: 12px 0px; text-transform: uppercase;}
+ .wrap-1 .nav li a.active{ color: #fce38a; border-bottom: 5px solid; }
+
+ .wrap-1 .icons{ list-style: none; padding: 0; display: flex; align-items:center}
+ .wrap-1 .icons li{  margin: 20px ;}
+ .wrap-1 .icons li a{ display: block; color: #fff; }
+
+ .banner{ text-align: center; color: #fff;}
+ .banner p.txt{  font-size: 72px;}
+ .banner p.large{ font-size: 150px;}
+ .sep{ width: 60px; height: 3px; background: #fff; margin: 40px auto; }
+ .banner .slide a{ display: inline-block; width: 160px; line-height: 36px; border: 2px solid; color: #fff;}
+.banner .pager{ margin: 20px 0; }
+.banner .pager ul{ list-style: none; padding: 0; display: flex; }
+.banner .pager ul li{ flex: 1 1 25%; padding: 15px; text-align: left; }
+.banner .pager ul li a{ display: block; height: 3px; background: #fff; position: relative;  margin-bottom: 20px; }
+.banner .pager ul li a.active::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #f38181;
+    animation: pageranim 4s 1 linear;
+}
+@keyframes pageranim {
+    from{ width: 0; }
+    to{ width: 100%; }
+}
+
+.wrap-2{  padding: 50px 0;}
+.wrap-3{ background: #95e1d3; padding: 50px 0; }
